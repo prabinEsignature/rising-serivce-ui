@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dist/extra.css">
+</head>
+
+<body>
+
+    <div class="min-h-screen rs-wrapper">
+        <div class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen shadow-xl">
+            <div class="rs-logo mb-12">
+                <a href="" class="rs-logo-link max-w-[110pxs]">
+                    <img src="images/logo.png" alt="" class="rs-logo-img">
+                </a>
+            </div>
+            <div class="rs-menu grid items-start gap-y-5">
+                <div
+                    class="rs-menu-item flex justify-center lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="invert brightness-1" src="icons/menu_grid_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Dashboard</span>
+                </div>
+                <div class="rs-menu-item flex justify-center lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="" src="icons/menu_card_shopping_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Sales History</span>
+                </div>
+                <div class="rs-menu-item flex justify-center lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="" src="icons/menu_store_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Outlet</span>
+                </div>
+                <div class="rs-menu-item flex justify-center lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="" src="icons/menu_user_tie_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Agents</span>
+                </div>
+            </div>
+        </div>
+        <div class="rs-main lg:ms-[240px] ms-[88px]">
+            <div class="rs-appbar shadow-md flex justify-end items-center p-5 gap-4">
+                <button type="button" class="text-black text-xl">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <div class="rs-profile overflow-hidden w-[48px] h-[48px] rounded-full">
+                    <img src="images/avatar.jpg" alt="" />
+                </div>
+            </div>
+            <div class="rs-content py-6 lg:px-10 md:px-8 sm:px-6 px-4">
+                <div class="rs-topbar flex items-center gap-4 flex-wrap justify-between">
+                    <h3 class="rs-title text-2xl font-bold text-black">Welcome</h3>
+                    <div class="flex items-center justify-end gap-2 flex-1 flex-wrap sm:flex-nowrap">
+                        <div
+                            class="flex items-center justify-center gap-2 border-[1px] border-[#D1D1D1] rounded-lg h-[44px] px-3 w-full max-w-[392px] flex-1">
+                            <span class="text-[#757575] text-sm">
+                                <i class="fas fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text"
+                                class="placeholder::text-[#9E9E9E] text-sm border-0 outline-0 transition-all ease-in-out duration-300 flex-1"
+                                placeholder="Search by outlet,agent..">
+                        </div>
+                        <button type="button"
+                            class="bg-[#003479] inline-flex items-center justify-center rounded-lg gap-2 text-white text-base h-[44px] px-3 border-[1px] border-[#003479] cursor-pointer hover:bg-transparent hover:text-[#003479] transition-all ease-in-out duration-300 outline-0 flex-1 md:flex-initial">
+                            <span class="whitespace-nowrap">Add New Outlet</span>
+                            <span>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="rs-table table-wrapper mt-12">
+                    <table class="w-full -mt-4 border-separate border-spacing-y-[16px]">
+                        <thead>
+                            <tr>
+                                <th class="bg-[#003479] text-white font-semibold text-[20px] p-5 rounded-tl-2xl">Name</th>
+                                <th class="bg-[#003479] text-white font-semibold text-[20px] p-5">Location</th>
+                                <th class="bg-[#003479] text-white font-semibold text-[20px] p-5">Owner</th>
+                                <th class="bg-[#003479] text-white font-semibold text-[20px] p-5">Contact</th>
+                                <th class="bg-[#003479] text-white font-semibold text-[20px] p-5 rounded-tr-2xl">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="custom-shadow-tr">
+                                <td class="text-base text-[#757575] p-5">Outlet 1</td>
+                                <td class="text-base text-[#757575] p-5">City center</td>
+                                <td class="text-base text-[#757575] p-5">Emily Brown</td>
+                                <td class="text-base text-[#757575] p-5">9874675780</td>
+                                <td class="text-base text-[#757575] p-5">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" class="text-base text-[#399305]">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <a href="#" class="text-base text-[#5084C9]">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <button type="button" class="text-base text-[#E21E1E]">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="text-base text-[#757575] p-5">Outlet 1</td>
+                                <td class="text-base text-[#757575] p-5">City center</td>
+                                <td class="text-base text-[#757575] p-5">Emily Brown</td>
+                                <td class="text-base text-[#757575] p-5">9874675780</td>
+                                <td class="text-base text-[#757575] p-5">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" class="text-base text-[#399305]">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <a href="#" class="text-base text-[#5084C9]">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <button type="button" class="text-base text-[#E21E1E]">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="text-base text-[#757575] p-5">Outlet 1</td>
+                                <td class="text-base text-[#757575] p-5">City center</td>
+                                <td class="text-base text-[#757575] p-5">Emily Brown</td>
+                                <td class="text-base text-[#757575] p-5">9874675780</td>
+                                <td class="text-base text-[#757575] p-5">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" class="text-base text-[#399305]">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <a href="#" class="text-base text-[#5084C9]">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <button type="button" class="text-base text-[#E21E1E]">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="text-base text-[#757575] p-5">Outlet 1</td>
+                                <td class="text-base text-[#757575] p-5">City center</td>
+                                <td class="text-base text-[#757575] p-5">Emily Brown</td>
+                                <td class="text-base text-[#757575] p-5">9874675780</td>
+                                <td class="text-base text-[#757575] p-5">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" class="text-base text-[#399305]">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <a href="#" class="text-base text-[#5084C9]">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <button type="button" class="text-base text-[#E21E1E]">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="text-base text-[#757575] p-5">Outlet 1</td>
+                                <td class="text-base text-[#757575] p-5">City center</td>
+                                <td class="text-base text-[#757575] p-5">Emily Brown</td>
+                                <td class="text-base text-[#757575] p-5">9874675780</td>
+                                <td class="text-base text-[#757575] p-5">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" class="text-base text-[#399305]">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <a href="#" class="text-base text-[#5084C9]">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <button type="button" class="text-base text-[#E21E1E]">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="text-base text-[#757575] p-5">Outlet 1</td>
+                                <td class="text-base text-[#757575] p-5">City center</td>
+                                <td class="text-base text-[#757575] p-5">Emily Brown</td>
+                                <td class="text-base text-[#757575] p-5">9874675780</td>
+                                <td class="text-base text-[#757575] p-5">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button type="button" class="text-base text-[#399305]">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <a href="#" class="text-base text-[#5084C9]">
+                                            <i class="fas fa-pen"></i>
+                                        </a>
+                                        <button type="button" class="text-base text-[#E21E1E]">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rs-pagination flex items-center gap-3">
+                    <ul class="flex items-center gap-2">
+                        <li class="group disabled">
+                            <a href="#" class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="group active">
+                            <a href="#" class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black">
+                               1
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black">
+                               2
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black">
+                               3
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black">
+                               ...
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black">
+                               10
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <select name="" id="" class="text-xs px-[10px] h-[32px] rounded-lg border-[1px] border-[#B5B5B5] text-black">
+                        <option value="">10 / page</option>
+                        <option value="">20 / page</option>
+                        <option value="">30 / page</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>

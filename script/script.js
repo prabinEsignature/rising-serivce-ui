@@ -1,0 +1,1 @@
+const rsSidebar = document.querySelector('.rs-sidebar');

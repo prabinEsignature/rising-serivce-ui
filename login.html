@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+
+    <div class="bg-[#F2F7FF] login-page flex items-center justify-center min-h-screen">
+        <div class="grid grid-cols-1 lg:grid-cols-2 m-4 max-w-[500px] lg:max-w-[1076px] gap-12 p-[30px] bg-white rounded-2xl shadow-lg w-full">
+            <div class="max-w-[488px] mx-auto flex items-center justify-center hidden lg:block">
+                <img src="images/login_hero.png" alt="" />
+            </div>
+            <div class="flex flex-col items-center justify-center p-10">
+                <a href="#" class="max-w-[214px] mb-[82px] ">
+                    <img src="images/logo.png" alt="" />
+                </a>
+                <h3 class="text-2xl font-bold">Log In</h3>
+                <div class="pt-2 pb-[10px] border-b-2 text-center w-full border-b-[#003479]">
+                    <p class="text-[#757575]">Please login</p>
+                </div>
+                <form action="" class="w-full">
+                    <div class="grid items-start gap-y-5 py-12">
+                        <div class="flex items-center justify-start gap-2 px-[10px] py-[15px] bg-[#F3F3F3] rounded-lg">
+                            <span class="flex items-center justify-center text-[#9D9D9D] text-[20px]">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <input type="text" class="text-[#9D9D9D] text-base" placeholder="Username">
+                        </div>
+                        <div class="flex items-center justify-start gap-2 px-[10px] py-[15px] bg-[#F3F3F3] rounded-lg relative">
+                            <span class="flex items-center justify-center text-[#9D9D9D] text-[20px]">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input type="password" class="text-[#9D9D9D] text-base" placeholder="Password">
+                            <button type="button" class="absolute right-[10px] top-1/2 -translate-y-1/2 text-[#9D9D9D] text-xs">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="text-white text-base font-bold w-full h-[50px] bg-[#003479] rounded-lg">login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src=""></script>
+</body>
+
+</html>
