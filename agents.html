@@ -43,16 +43,16 @@
                     <span class="text-base font-normal hidden lg:inline-flex">Sales History</span>
                 </a>
                 <a href="#"
-                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
-                        <img class="invert brightness-1" src="icons/menu_store_primary.svg" alt="" />
+                        <img class="" src="icons/menu_store_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Outlet</span>
                 </a>
                 <a href="#"
-                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
                     <span class="inline-flex items-center justify-center text-base">
-                        <img class="" src="icons/menu_user_tie_primary.svg" alt="" />
+                        <img class="invert brightness-1" src="icons/menu_user_tie_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Agents</span>
                 </a>
@@ -70,7 +70,7 @@
             </div>
             <div class="rs-content py-6">
                 <div class="rs-topbar px-5 flex items-center gap-4 flex-col lg:flex-wrap lg:flex-row justify-between">
-                    <h3 class="rs-title text-2xl font-bold text-black w-full">Outlet</h3>
+                    <h3 class="rs-title text-2xl font-bold text-black w-full">Agents</h3>
                     <div class="flex items-center justify-end gap-2 flex-1 flex-wrap sm:flex-nowrap w-full lg:w-auto">
                         <div
                             class="flex items-center justify-center gap-2 border-[1px] border-[#D1D1D1] rounded-lg h-[44px] px-3 w-full max-w-[392px] flex-1">
@@ -83,8 +83,8 @@
                         </div>
                         <button type="button"
                             class="bg-[#003479] inline-flex items-center justify-center rounded-lg gap-2 text-white text-base h-[44px] px-3 border-[1px] border-[#003479] cursor-pointer hover:bg-transparent hover:text-[#003479] transition-all ease-in-out duration-300 outline-0 flex-1 md:flex-initial open-cs-modal"
-                            data-cs-target="#csOutletAddModal">
-                            <span class="whitespace-nowrap">Add New Outlet</span>
+                            data-cs-target="#csAgentAddModal">
+                            <span class="whitespace-nowrap">Add New Agent</span>
                             <span>
                                 <i class="fas fa-plus"></i>
                             </span>
@@ -105,10 +105,10 @@
                                     Location</th>
                                 <th
                                     class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3">
-                                    Owner</th>
+                                    Contact</th>
                                 <th
                                     class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3">
-                                    Contact</th>
+                                    Vehicle Number</th>
                                 <th
                                     class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3 rounded-tr-2xl">
                                     Action
@@ -117,10 +117,170 @@
                         </thead>
                         <tbody>
                             <tr class="custom-shadow-tr">
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Outlet 1</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City center</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Emily Brown</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9874675780</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Alex Brown
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City
+                                    center</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9868790098
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Ba
+                                    1-1-2345</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button data-cs-target="#csAgentPreviewModal" type="button"
+                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Alex Brown
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City
+                                    center</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9868790098
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Ba
+                                    1-1-2345</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button data-cs-target="#csAgentPreviewModal" type="button"
+                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Alex Brown
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City
+                                    center</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9868790098
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Ba
+                                    1-1-2345</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button data-cs-target="#csAgentPreviewModal" type="button"
+                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Alex Brown
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City
+                                    center</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9868790098
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Ba
+                                    1-1-2345</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button data-cs-target="#csAgentPreviewModal" type="button"
+                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Alex Brown
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City
+                                    center</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9868790098
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Ba
+                                    1-1-2345</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button data-cs-target="#csAgentPreviewModal" type="button"
+                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Alex Brown
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City
+                                    center</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9868790098
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Ba
+                                    1-1-2345</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button data-cs-target="#csAgentPreviewModal" type="button"
+                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-pen"></i>
+                                        </button>
+                                        <button type="button"
+                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Alex Brown
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City
+                                    center</td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9868790098
+                                </td>
+                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Ba
+                                    1-1-2345</td>
                                 <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
                                     <div class="flex items-center justify-center gap-2">
                                         <button data-cs-target="#csOutletPreviewModal" type="button"
@@ -137,111 +297,6 @@
                                         </button>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr class="custom-shadow-tr">
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Outlet 1</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City center</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Emily Brown</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9874675780</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
-                                    <div class="flex items-center justify-center gap-2">
-                                        <button data-cs-target="#csOutletPreviewModal" type="button"
-                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
-                                            <i class="fas fa-eye"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-pen"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                            </tr>
-                            <tr class="custom-shadow-tr">
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Outlet 1</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City center</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Emily Brown</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9874675780</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
-                                    <div class="flex items-center justify-center gap-2">
-                                        <button data-cs-target="#csOutletPreviewModal" type="button"
-                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
-                                            <i class="fas fa-eye"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-pen"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                            </tr>
-                            <tr class="custom-shadow-tr">
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Outlet 1</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City center</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Emily Brown</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9874675780</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
-                                    <div class="flex items-center justify-center gap-2">
-                                        <button data-cs-target="#csOutletPreviewModal" type="button"
-                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
-                                            <i class="fas fa-eye"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-pen"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                            </tr>
-                            <tr class="custom-shadow-tr">
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Outlet 1</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City center</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Emily Brown</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9874675780</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
-                                    <div class="flex items-center justify-center gap-2">
-                                        <button data-cs-target="#csOutletPreviewModal" type="button"
-                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
-                                            <i class="fas fa-eye"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-pen"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                            </tr>
-                            <tr class="custom-shadow-tr">
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Outlet 1</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">City center</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">Emily Brown</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">9874675780</td>
-                                <td class="lg:text-base text-sm text-[#757575] lg:p-5 md:p-4 text-center p-3">
-                                    <div class="flex items-center justify-center gap-2">
-                                        <button data-cs-target="#csOutletPreviewModal" type="button"
-                                            class="text-base text-[#399305] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300 open-cs-modal">
-                                            <i class="fas fa-eye"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#5084C9] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-pen"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="text-base text-[#E21E1E] cursor-pointer hover:scale-[1.05] transition-all ease-in-out duration-300">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
                             </tr>
                         </tbody>
                     </table>
@@ -303,13 +358,13 @@
     </div>
 
 
-    <div class="cs-modal fixed top-0 left-0 invisible opacity-0 transition-all ease-in-out duration-300 w-full h-full bg-black/10 flex items-center justify-center"
-        id="csOutletPreviewModal">
+    <div class="cs-modal fixed top-0 left-0 invisible px-4 opacity-0 transition-all ease-in-out duration-300 w-full h-full bg-black/10 flex items-center justify-center"
+        id="csAgentPreviewModal">
         <div
             class="cs-modal-dialog bg-white rounded-2xl overflow-hidden custom-shadow-base p-6 max-w-[563px] w-full relative">
             <div class="cs-modal-content">
                 <div class="cs-modal-header px-3 pb-2">
-                    <h3 class="font-bold text-black text-[20px]">Outlet</h3>
+                    <h3 class="font-bold text-black text-[20px]">Agents</h3>
                     <button type="button"
                         class="close-cs-modal cursor-pointer absolute right-[20px] top-[20px] text-[20px] text-black hover:text-[#003479] transition-all ease-in-out duration-300">
                         <i class="fas fa-xmark"></i>
@@ -319,7 +374,7 @@
                     <ul class="p-0 m-0 grid grid-cols-2 gap-x-4 gap-y-12">
                         <li>
                             <p class="text-base font-normal text-[#003479]">Name</p>
-                            <p class="text-base font-normal text-[#727272]">Outlet 1</p>
+                            <p class="text-base font-normal text-[#727272]">Alex Brown</p>
                         </li>
                         <li>
                             <p class="text-base font-normal text-[#003479]">Country</p>
@@ -334,22 +389,29 @@
                             <p class="text-base font-normal text-[#727272]">City Center</p>
                         </li>
                         <li>
-                            <p class="text-base font-normal text-[#003479]">Owner</p>
-                            <p class="text-base font-normal text-[#727272]">Emaily brown</p>
+                            <p class="text-base font-normal text-[#003479]">Phone</p>
+                            <p class="text-base font-normal text-[#727272]">9867789809</p>
                         </li>
                         <li>
                             <p class="text-base font-normal text-[#003479]">Email</p>
                             <p class="text-base font-normal text-[#727272]">emilybrown@gmail.com</p>
                         </li>
                         <li>
-                            <p class="text-base font-normal text-[#003479]">Contact</p>
-                            <p class="text-base font-normal text-[#727272]">98234982349</p>
-                        </li>
-                        <li>
                             <p class="text-base font-normal text-[#003479]">Postal Code</p>
                             <p class="text-base font-normal text-[#727272]">90001</p>
                         </li>
+                        <li>
+                            <p class="text-base font-normal text-[#003479]">Vehicle Number</p>
+                            <p class="text-base font-normal text-[#727272]">Ga 2-3-5678</p>
+                        </li>
                     </ul>
+                    <div class="mt-12 grid items-start gap-y-2">
+                        <p class="text-base font-normal text-[#003479]">Name</p>
+                        <a href="" class="border-[#E5E5E5] border-[1px] bg-[#F5F5F5] rounded-xl inline-flex items-center justify-start px-3 py-[10px] w-full gap-x-5">
+                            <span class="w-[36px] bg-white h-[36px] rounded-full overflow-hidden inline-flex items-center justify-center"><img src="icons/file_pdf_red_500.svg" alt="" /> </span>
+                            <span class="text-black font-medium text-base tracking-[0.03em]">test.pdf</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="cs-modal-footer">
                 </div>
@@ -357,13 +419,13 @@
         </div>
     </div>
 
-    <div class="cs-modal fixed top-0 left-0 invisible opacity-0 transition-all ease-in-out duration-300 w-full h-full bg-black/10 flex items-center justify-center"
-        id="csOutletAddModal">
+    <div class="cs-modal fixed top-0 left-0 invisible px-4 opacity-0 transition-all ease-in-out duration-300 w-full h-full bg-black/10 flex items-center justify-center"
+        id="csAgentAddModal">
         <div
             class="cs-modal-dialog bg-white rounded-2xl overflow-hidden custom-shadow-base p-6 max-w-[662px] w-full relative">
             <div class="cs-modal-content">
                 <div class="cs-modal-header px-3 pb-2">
-                    <h3 class="font-bold text-black text-[20px]">Add New Outlet</h3>
+                    <h3 class="font-bold text-black text-[20px]">Add New Agent</h3>
                     <button type="button"
                         class="close-cs-modal cursor-pointer absolute right-[20px] top-[20px] text-[20px] text-black hover:text-[#003479] transition-all ease-in-out duration-300">
                         <i class="fas fa-xmark"></i>
@@ -373,26 +435,19 @@
                     <form action="">
                         <div class="grid items-start gap-y-5">
                             <div class="flex flex-col gap-y-2">
-                                <label for="" class="text-[#878787] text-base font-medium">Owner(Full Name)<span
+                                <label for="" class="text-[#878787] text-base font-medium">Agent Name<span
                                         class="text-[#E21E1E]">*</span></label>
                                 <input type="text" placeholder=""
                                     class="border-[#DFDFDF] border-[1px] h-10 rounded-lg px-[10px] text-[#727272] outline-0">
                             </div>
                             <div class="flex flex-col gap-y-2">
-                                <label for="" class="text-[#878787] text-base font-medium">Outlet Name<span
+                                <label for="" class="text-[#878787] text-base font-medium">Agent Phone<span
                                         class="text-[#E21E1E]">*</span></label>
                                 <input type="text" placeholder=""
                                     class="border-[#DFDFDF] border-[1px] h-10 rounded-lg px-[10px] text-[#727272] outline-0">
                             </div>
                             <div class="flex flex-col gap-y-2">
-                                <label for="" class="text-[#878787] text-base font-medium">Email<span
-                                        class="text-[#E21E1E]">*</span></label>
-                                <input type="text" placeholder=""
-                                    class="border-[#DFDFDF] border-[1px] h-10 rounded-lg px-[10px] text-[#727272] outline-0">
-                            </div>
-                            <div class="flex flex-col gap-y-2">
-                                <label for="" class="text-[#878787] text-base font-medium">Owner Phone<span
-                                        class="text-[#E21E1E]">*</span></label>
+                                <label for="" class="text-[#878787] text-base font-medium">Email</label>
                                 <input type="text" placeholder=""
                                     class="border-[#DFDFDF] border-[1px] h-10 rounded-lg px-[10px] text-[#727272] outline-0">
                             </div>
@@ -427,6 +482,15 @@
                                         class="text-[#E21E1E]">*</span></label>
                                 <input type="text" placeholder=""
                                     class="border-[#DFDFDF] border-[1px] h-10 rounded-lg px-[10px] text-[#727272] outline-0">
+                            </div>
+                            <div class="grid items-start gap-y-2">
+                                <label for="" class="text-[#878787] text-base font-medium">Document<span
+                                    class="text-[#E21E1E]">*</span></label>
+                                <a href="" class="border-[#E5E5E5] border-[1px] bg-[#F5F5F5] rounded-xl inline-flex items-center justify-start px-3 py-[10px] w-full gap-x-5">
+                                    <span class="w-[36px] bg-white h-[36px] rounded-full overflow-hidden inline-flex items-center justify-center"><img src="icons/file_pdf_red_500.svg" alt="" /> </span>
+                                    <span class="text-black font-medium text-base tracking-[0.03em]" id="fileName">test.pdf</span>
+                                </a>
+                                <input type="file" accept="" name="" placeholder="" id="fileInput" class="border-[#DFDFDF] border-[1px] h-[56px] rounded-lg px-[10px] text-[#727272] outline-0 pt-2">
                             </div>
                         </div>
                         <div class="flex items-center justify-center mt-12">

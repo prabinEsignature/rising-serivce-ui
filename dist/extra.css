@@ -1,11 +1,48 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+body {
+  font-family: "Inter", serif;
 }
-body{
-    font-family: "Inter", serif;
+.custom-shadow-base {
+  box-shadow: 0 4px 24px 0 rgb(150, 150, 150, 0.25);
 }
 .custom-shadow-tr {
   box-shadow: 0 4px 24px 0 rgb(150, 150, 150, 0.25);
+}
+
+/* scrollbar */
+.scrollbar-y::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar-y::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-y::-webkit-scrollbar-thumb {
+  background-color: #003479;
+  border-radius: 100vh;
+
+}
+
+.scrollbar-x::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scrollbar-x::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-x::-webkit-scrollbar-thumb {
+  background-color: #003479;
+  border-radius: 100vh;
+}
+
+
+input[type="file"]::-webkit-file-upload-button{
+    background-color: #003479;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: 600;
 }

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dist/extra.css" />
+</head>
+
+<body>
+    <div class="min-h-screen rs-wrapper">
+        <div class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen shadow-xl">
+            <div class="rs-logo mb-12">
+                <a href="" class="rs-logo-link max-w-[110pxs]">
+                    <img src="images/logo.png" alt="" class="rs-logo-img">
+                </a>
+            </div>
+            <div class="rs-menu grid items-start gap-y-5">
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="" src="icons/menu_grid_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Dashboard</span>
+                </a>
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="invert brightness-1" src="icons/menu_card_shopping_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Sales History</span>
+                </a>
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="" src="icons/menu_store_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Outlet</span>
+                </a>
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="inline-flex items-center justify-center text-base">
+                        <img class="" src="icons/menu_user_tie_primary.svg" alt="" />
+                    </span>
+                    <span class="text-base font-normal hidden lg:inline-flex">Agents</span>
+                </a>
+            </div>
+        </div>
+        <div class="rs-main lg:ms-[240px] ms-[88px]">
+            <div class="rs-appbar custom-shadow-base flex justify-end items-center p-5 gap-4">
+                <button type="button" class="text-black text-xl">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <div
+                    class="rs-profile overflow-hidden lg:w-[48px] lg:h-[48px] md:w-[40px] md:h-[40px] w-[36px] h-[36px] rounded-full">
+                    <img src="images/avatar.jpg" alt="" />
+                </div>
+            </div>
+            <div class="rs-content py-6">
+                <div class="rs-topbar px-5 flex items-center gap-4 flex-col lg:flex-wrap lg:flex-row justify-between">
+                    <h3 class="rs-title text-2xl font-bold text-black w-full">Sales History</h3>
+                    <div class="flex items-center justify-end gap-2 flex-1 flex-wrap sm:flex-nowrap w-full lg:w-auto">
+                        <div
+                            class="flex items-center justify-center gap-2 border-[1px] border-[#D1D1D1] rounded-lg h-[44px] px-3 w-full max-w-[392px] flex-1">
+                            <span class="text-[#757575] text-sm">
+                                <i class="fas fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text"
+                                class="placeholder::text-[#9E9E9E] text-sm border-0 outline-0 transition-all ease-in-out duration-300 flex-1"
+                                placeholder="Search by outlet,agent..">
+                        </div>
+                        <input type="date"
+                            class="rounded-lg border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out w-full md:max-w-[148px] placeholder:text-[#D9D9D9] text-[#757575] text-sm" />
+                    </div>
+                </div>
+                <div class="rs-table table-wrapper mt-12 overflow-x-scroll scrollbar-x px-5">
+                    <table
+                        class="w-full lg:-mt-4 md:-mt-3 -mt-2 border-separate lg:border-spacing-y-[16px] md:border-spacing-y-[12px] border-spacing-y-[8px] min-w-[800px]">
+                        <thead>
+                            <tr>
+                                <th
+                                    class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3 rounded-tl-2xl">
+                                    ID
+                                </th>
+                                <th
+                                    class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3">
+                                    Outlet Name</th>
+                                <th
+                                    class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3">
+                                    Agent Name</th>
+                                <th
+                                    class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3">
+                                    Total Amount</th>
+                                <th
+                                    class="bg-[#003479] text-white font-medium lg:text-[20px] md:text-lg text-base lg:p-5 md:p-4 p-3 rounded-tr-2xl">
+                                    Date
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">10001</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">ABC Outlet</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">Alex Brown</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3"><span class="font-medium">Rs.</span>100.00</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">
+                                    2025-02-09
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">10001</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">ABC Outlet</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">Alex Brown</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3"><span class="font-medium">Rs.</span>100.00</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">
+                                    2025-02-09
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">10001</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">ABC Outlet</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">Alex Brown</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3"><span class="font-medium">Rs.</span>100.00</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">
+                                    2025-02-09
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">10001</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">ABC Outlet</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">Alex Brown</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3"><span class="font-medium">Rs.</span>100.00</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">
+                                    2025-02-09
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">10001</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">ABC Outlet</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">Alex Brown</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3"><span class="font-medium">Rs.</span>100.00</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">
+                                    2025-02-09
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">10001</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">ABC Outlet</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">Alex Brown</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3"><span class="font-medium">Rs.</span>100.00</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">
+                                    2025-02-09
+                                </td>
+                            </tr>
+                            <tr class="custom-shadow-tr">
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">10001</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">ABC Outlet</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">Alex Brown</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3"><span class="font-medium">Rs.</span>100.00</td>
+                                <td class="lg:text-base text-sm text-[#757575] text-center lg:p-5 md:p-4 p-3">
+                                    2025-02-09
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rs-pagination flex items-center justify-end gap-3 px-5 mt-12">
+                    <ul class="flex items-center gap-2">
+                        <li class="group disabled">
+                            <a href="#"
+                                class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black hover:opacity-90 transition-all ease-in-out duration-300">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="group active">
+                            <a href="#"
+                                class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black hover:opacity-90 transition-all ease-in-out duration-300">
+                                1
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black hover:opacity-90 transition-all ease-in-out duration-300">
+                                2
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black hover:opacity-90 transition-all ease-in-out duration-300">
+                                3
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black hover:opacity-90 transition-all ease-in-out duration-300">
+                                ...
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black hover:opacity-90 transition-all ease-in-out duration-300">
+                                10
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="text-xs w-[24px] h-[25px] rounded-lg border-[1px] border-[#B5B5B5] inline-flex justify-center items-center disabled:text-[#B5B5B5] group-[.disabled]:text-[#B5B5B5] group-[.active]:text-white group-[.active]:bg-[#003479] group-[.active]:border-[#003479] text-black hover:opacity-90 transition-all ease-in-out duration-300">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <select name="" id=""
+                        class="text-xs px-[10px] h-[32px] rounded-lg border-[1px] border-[#B5B5B5] text-black">
+                        <option value="">10 / page</option>
+                        <option value="">20 / page</option>
+                        <option value="">30 / page</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>

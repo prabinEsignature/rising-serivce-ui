@@ -16,66 +16,69 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="dist/extra.css" />
 </head>
 
 <body>
-
     <div class="min-h-screen rs-wrapper">
-        <div class="rs-sidebar w-[240px] bg-white p-5 fixed top-0 left-0 min-h-screen shadow-xl">
+        <div class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen shadow-xl">
             <div class="rs-logo mb-12">
                 <a href="" class="rs-logo-link max-w-[110pxs]">
                     <img src="images/logo.png" alt="" class="rs-logo-img">
                 </a>
             </div>
-            <div class="rs-menu grid items-start gap-y-5">
-                <div
-                    class="rs-menu-item flex items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
+            <div class="rs-menu grid items-start gap-y-5 group">
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="invert brightness-1" src="icons/menu_grid_primary.svg" alt="" />
                     </span>
-                    <span class="text-base font-normal">Dashboard</span>
-                </div>
-                <div class="rs-menu-item flex items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="text-base font-normal hidden lg:inline-flex">Dashboard</span>
+                </a>
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_card_shopping_primary.svg" alt="" />
                     </span>
-                    <span class="text-base font-normal">Sales History</span>
-                </div>
-                <div class="rs-menu-item flex items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="text-base font-normal hidden lg:inline-flex">Sales History</span>
+                </a>
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_store_primary.svg" alt="" />
                     </span>
-                    <span class="text-base font-normal">Outlet</span>
-                </div>
-                <div class="rs-menu-item flex items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    <span class="text-base font-normal hidden lg:inline-flex">Outlet</span>
+                </a>
+                <a href="#"
+                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_user_tie_primary.svg" alt="" />
                     </span>
-                    <span class="text-base font-normal">Agents</span>
-                </div>
+                    <span class="text-base font-normal hidden lg:inline-flex">Agents</span>
+                </a>
             </div>
         </div>
-        <div class="rs-main ms-[240px]">
-            <div class="rs-appbar shadow-md flex justify-end items-center p-5 gap-4">
+        <div class="rs-main lg:ms-[240px] ms-[88px]">
+            <div class="rs-appbar custom-shadow-base flex justify-end items-center p-5 gap-4">
                 <button type="button" class="text-black text-xl">
                     <i class="fa-solid fa-bell"></i>
                 </button>
-                <div class="rs-profile overflow-hidden w-[48px] h-[48px] rounded-full">
+                <div
+                    class="rs-profile overflow-hidden lg:w-[48px] lg:h-[48px] md:w-[40px] md:h-[40px] w-[36px] h-[36px] rounded-full">
                     <img src="images/avatar.jpg" alt="" />
                 </div>
             </div>
-            <div class="rs-content py-6 px-10">
-                <div class="rs-topbar">
-                    <h3 class="rs-title text-2xl font-bold text-black">Outlet</h3>
-                    <div class="flex items-center justify-end flex-wrap">
+            <div class="rs-content py-6">
+                <div class="rs-topbar px-5 flex items-center gap-4 flex-col md:flex-wrap md:flex-row justify-between">
+                    <h3 class="rs-title text-2xl font-bold text-black w-full md:w-auto">Outlet</h3>
+                    <div class="flex items-center justify-end flex-wrap w-full md:w-auto">
                         <input type="date"
-                            class="rounded-lg border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out" />
+                            class="rounded-lg border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out w-full md:max-w-[148px] placeholder:text-[#D9D9D9] text-[#757575] text-sm" />
                     </div>
                 </div>
-                <div class="rs-block-cards grid grid-cols-3 mt-12 gap-5">
+                <div class="rs-block-cards grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-12 gap-5 px-5">
                     <div
-                        class="rs-block-card-item flex justify-center items-center gap-[34px] shadow-lg rounded-lg p-5">
+                        class="rs-block-card-item flex justify-center items-center gap-[34px] custom-shadow-base rounded-lg p-5">
                         <div class="text-[#003479] text-[32px]">
                             <i class="fas fa-cart-shopping"></i>
                         </div>
@@ -85,7 +88,7 @@
                         </div>
                     </div>
                     <div
-                        class="rs-block-card-item flex justify-center items-center gap-[34px] shadow-lg rounded-lg p-5">
+                        class="rs-block-card-item flex justify-center items-center gap-[34px] custom-shadow-base rounded-lg p-5">
                         <div class="text-[#F8C333] text-[32px]">
                             <i class="fas fa-cart-shopping"></i>
                         </div>
@@ -95,7 +98,7 @@
                         </div>
                     </div>
                     <div
-                        class="rs-block-card-item flex justify-center items-center gap-[34px] shadow-lg rounded-lg p-5">
+                        class="rs-block-card-item flex justify-center items-center gap-[34px] custom-shadow-base rounded-lg p-5">
                         <div class="text-[#399305] text-[32px]">
                             <i class="fas fa-cart-shopping"></i>
                         </div>
@@ -108,7 +111,6 @@
             </div>
         </div>
     </div>
-
 
     <script src=""></script>
 </body>
