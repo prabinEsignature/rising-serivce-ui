@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const sidebarOpenBtn = document.getElementById('sidebar-open-btn');
     const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
 
@@ -10,6 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sidebarCloseBtn.addEventListener('click', () => {
         rsSidebar.classList.add("-translate-x-100");
+    });
+
+    document.addEventListener('click', (e) => {
+        const isClickInsideSidebar = rsSidebar.contains(e.target);
+        const isClickOnSidebarButton = sidebarOpenBtn.contains(e.target);
+
+        if(!isClickInsideSidebar && !isClickOnSidebarButton) {
+            rsSidebar.classList.add('-translate-x-100');
+        }
     })
 
     // new Litepicker({ element: document.getElementById('datepicker') });
@@ -92,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isLightpickOpen && !e.target.closest('.cs-dropdown')) {
             return;
         }
-        
+
         const dropdownBox = e.target.closest('.cs-dropdown-menu');
 
         if (dropdownBox) {
