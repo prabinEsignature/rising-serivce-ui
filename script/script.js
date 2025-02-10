@@ -3,19 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
 
     const rsSidebar = document.querySelector('.rs-sidebar');
-    sidebarOpenBtn.addEventListener('click', () => {
+    sidebarOpenBtn?.addEventListener('click', () => {
         rsSidebar.classList.remove('-translate-x-100');
     });
 
-    sidebarCloseBtn.addEventListener('click', () => {
+    sidebarCloseBtn?.addEventListener('click', () => {
         rsSidebar.classList.add("-translate-x-100");
     });
 
     document.addEventListener('click', (e) => {
-        const isClickInsideSidebar = rsSidebar.contains(e.target);
-        const isClickOnSidebarButton = sidebarOpenBtn.contains(e.target);
+        const isClickInsideSidebar = rsSidebar?.contains(e.target);
+        const isClickOnSidebarButton = sidebarOpenBtn?.contains(e.target);
 
-        if(!isClickInsideSidebar && !isClickOnSidebarButton) {
+        if (!isClickInsideSidebar && !isClickOnSidebarButton) {
             rsSidebar.classList.add('-translate-x-100');
         }
     })
@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // CUSTOM DRODOWN
     const csDropdownMenu = document.querySelector('.cs-dropdown-menu');
-    const csDropdownOptions = csDropdownMenu.querySelectorAll('.cs-dropdown-option');
+    const csDropdownOptions = csDropdownMenu?.querySelectorAll('.cs-dropdown-option');
 
-    if (csDropdownOptions.length > 0) {
+    if (csDropdownOptions?.length > 0) {
         const firstOption = csDropdownOptions[0];
         firstOption.classList.add('bg-[#ECF4FF]');
         firstOption.querySelector('.dropdown-icon').classList.remove("hidden");
@@ -136,5 +136,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
+    document.querySelectorAll('[data-dismiss="cs-alert"]').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const alertBox = e.target.closest('.cs-alert-dismissible');
+            if (alertBox) {
+                alertBox.classList.add('hidden');  
+            }
+        });
+    });
 });
