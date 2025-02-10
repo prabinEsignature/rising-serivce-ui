@@ -16,12 +16,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="vendor/lightpick/lightpick.css" />
     <link rel="stylesheet" href="dist/extra.css" />
 </head>
 
 <body>
     <div class="min-h-screen rs-wrapper">
-        <div class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen custom-shadow-base md:translate-x-0 -translate-x-100 ease-in-out duration-300 z-[1000]">
+        <div
+            class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen custom-shadow-base md:translate-x-0 -translate-x-100 ease-in-out duration-300 z-[1000]">
             <button id="sidebar-close-btn" type="button"
                 class="absolute -right-10 w-8 h-8 bg-[#003479] text-white rounded-full d-inline-flex items-center justify-center md:hidden cursor-pointer">
                 <i class="fas fa-xmark"></i>
@@ -91,10 +93,75 @@
                                 placeholder="Search by outlet,agent..">
                         </div>
                         <div class="relative md:max-w-[148px] md:w-[140px] w-full">
+                            <div
+                                class="rounded-lg h-[44px] border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out w-full placeholder:text-[#D9D9D9] text-[#757575] text-sm cs-dropdown-menu relative">
+                                <div class="cs-dropdown-selected h-full inline-flex items-center">
+                                    <span class="datepicker-value"></span>
+                                </div>
+
+                                <div
+                                    class="cs-dropdown-select hidden absolute top-full right-0 w-[216px] rounded-[12px] p-1 custom-shadow-dropdown border-[#E5E5E5] border-[1px] mt-2 bg-white text-black/60 z-[100]">
+                                    <div
+                                        class="cs-dropdown-option h-10 relative cursor-pointer transition-all ease-in-out duration-300 hover:bg-[#ECF4FF] px-3 py-2 inline-flex items-center justify-between w-full">
+                                        <span class="text-base tracking-[0.03em] dropdown-text">Today</span>
+                                        <span class="text-[#003479] text-[20px] hidden dropdown-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="cs-dropdown-option h-10 relative cursor-pointer transition-all ease-in-out duration-300 hover:bg-[#ECF4FF] px-3 py-2 inline-flex items-center justify-between w-full">
+                                        <span class="text-base tracking-[0.03em] dropdown-text">Yesterday</span>
+                                        <span class="text-[#003479] text-[20px] hidden dropdown-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="cs-dropdown-option h-10 relative cursor-pointer transition-all ease-in-out duration-300 hover:bg-[#ECF4FF] px-3 py-2 inline-flex items-center justify-between w-full">
+                                        <span class="text-base tracking-[0.03em] dropdown-text">Last 2 Days</span>
+                                        <span class="text-[#003479] text-[20px] hidden dropdown-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="cs-dropdown-option h-10 relative cursor-pointer transition-all ease-in-out duration-300 hover:bg-[#ECF4FF] px-3 py-2 inline-flex items-center justify-between w-full">
+                                        <span class="text-base tracking-[0.03em] dropdown-text">Last 7 Days</span>
+                                        <span class="text-[#003479] text-[20px] hidden dropdown-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="cs-dropdown-option h-10 relative cursor-pointer transition-all ease-in-out duration-300 hover:bg-[#ECF4FF] px-3 py-2 inline-flex items-center justify-between w-full">
+                                        <span class="text-base tracking-[0.03em] dropdown-text">Last 1 Month</span>
+                                        <span class="text-[#003479] text-[20px] hidden dropdown-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="cs-dropdown-option h-10 relative cursor-pointer transition-all ease-in-out duration-300 hover:bg-[#ECF4FF] px-3 py-2 inline-flex items-center justify-between w-full">
+                                        <span class="text-base tracking-[0.03em] dropdown-text">Last 3 Month</span>
+                                        <span class="text-[#003479] text-[20px] hidden dropdown-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="cs-dropdown-separator px-3 py-3 inline-flex items-center justify-between w-full border-t-[#E5E5E5] border-t-[1px] relative">
+                                        <span class="text-base absolute left-3 top-2 w-full h-full tracking-[0.03em]">Custom</span>
+                                        <input type="text" id="datepicker" class="opacity-0 cursor-pointer">
+                                        <span class="text-[#003479] text-[20px] hidden dropdown-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 text-base text-[#003479] pointer-events-none"><i
+                                    class="fas fa-calendar cursor-pointer"></i></span>
+                        </div>
+                        <!-- <div class="relative md:max-w-[148px] md:w-[140px] w-full">
                             <input type="date"
                                 class="rounded-lg h-[44px] border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out w-full placeholder:text-[#D9D9D9] text-[#757575] text-sm" />
                             <span class="absolute right-2 top-1/2 transform -translate-y-1/2 text-base text-[#003479] pointer-events-none"><i class="fas fa-calendar cursor-pointer"></i></span>
-                        </div>
+                        </div> -->
                         <!-- <input type="text" id="datepicker" placeholder="mm/dd/yy" class="rounded-lg h-[44px] border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out w-full md:max-w-[148px] placeholder:text-[#D9D9D9] text-[#757575] text-sm"> -->
                     </div>
                 </div>
@@ -267,8 +334,31 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"
+        integrity="sha512-O2Y8hD83PQtRf8vcr0N+yxwRtErIVaHJ4NOpojzq2yvUmhiJbQIT9OAYu27t+mVk814t+ongBVGx+YGylICVkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"
+        integrity="sha512-/kTWf+CIifBfQW0eljsGAbTAMdcQPkH0PfRhBynN2u1eeid96R6skpyK5OWGvLPz6/cDqq8VR7/cbibFFdWrxw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="vendor/lightpick/lightpick.js"></script>
     <script src="script/script.js"></script>
+    <script>
+        var picker = new Lightpick({
+            field: document.getElementById('datepicker'),
+            singleDate: true,
+            format: 'DD/MM/YYYY', // Set format to dd/mm/yyyy
+
+            // onSelect: function (start, end) {
+            //     var str = '';
+            //     str += start ? start.format('DD/MM/YYYY') + ' to ' : '';
+            //     str += end ? end.format('DD/MM/YYYY') : '...';
+            //     document.querySelector('.cs-dropdown-selected .datepicker-value').innerHTML = str;
+            // }
+            onSelect: function (date) {
+                document.querySelector('.cs-dropdown-selected .datepicker-value').innerHTML = date.format('DD/MM/YYYY');
+            }
+        });
+    </script>
 </body>
 
 </html>

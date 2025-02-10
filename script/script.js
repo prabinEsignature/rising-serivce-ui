@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebarOpenBtn = document.getElementById('sidebar-open-btn');
     const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
 
-    const rsSidebar =document.querySelector('.rs-sidebar');
+    const rsSidebar = document.querySelector('.rs-sidebar');
     sidebarOpenBtn.addEventListener('click', () => {
         rsSidebar.classList.remove('-translate-x-100');
     });
@@ -73,4 +73,60 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // CUSTOM DRODOWN
+    const csDropdownMenu = document.querySelector('.cs-dropdown-menu');
+    const csDropdownOptions = csDropdownMenu.querySelectorAll('.cs-dropdown-option');
+
+    if (csDropdownOptions.length > 0) {
+        const firstOption = csDropdownOptions[0];
+        firstOption.classList.add('bg-[#ECF4FF]');
+        firstOption.querySelector('.dropdown-icon').classList.remove("hidden");
+        firstOption.querySelector('.dropdown-text').classList.add('text-black');
+        csDropdownMenu.querySelector('.datepicker-value').textContent = firstOption.querySelector('.dropdown-text').textContent;
+    }
+
+    document.addEventListener('click', function (e) {
+        const isLightpickOpen = document.querySelector('.lightpick:not(.is-hidden)') !== null;
+
+        if (isLightpickOpen && !e.target.closest('.cs-dropdown')) {
+            return;
+        }
+        
+        const dropdownBox = e.target.closest('.cs-dropdown-menu');
+
+        if (dropdownBox) {
+            const dropdownSelect = dropdownBox.querySelector('.cs-dropdown-select');
+            dropdownSelect.classList.remove("hidden");
+
+            const options = dropdownSelect.querySelectorAll('.cs-dropdown-option');
+            const selectedText = dropdownBox.querySelector('.datepicker-value');
+
+            dropdownSelect.addEventListener('click', function (event) {
+                const option = event.target.closest('.cs-dropdown-option');
+                if (option) {
+                    options.forEach(opt => {
+                        opt.classList.remove('bg-[#ECF4FF]');
+                        opt.querySelector('.dropdown-icon').classList.add("hidden");
+                        opt.querySelector('.dropdown-text').classList.remove('text-black');
+                    });
+
+                    option.classList.add('bg-[#ECF4FF]');
+                    option.querySelector('.dropdown-text').classList.add('text-black');
+                    option.querySelector('.dropdown-text').classList.remove('hidden');
+                    option.querySelector('.dropdown-icon').classList.remove("hidden");
+
+                    if (selectedText) {
+                        selectedText.textContent = option.querySelector('.dropdown-text').textContent;
+                    }
+
+                    dropdownSelect.classList.add("hidden");
+                }
+            });
+        } else {
+            document.querySelectorAll('.cs-dropdown-select').forEach(select => select.classList.add('hidden'));
+        }
+    });
+
+
 });

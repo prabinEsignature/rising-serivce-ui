@@ -10,6 +10,9 @@ body {
 .custom-shadow-tr {
   box-shadow: 0 4px 24px 0 rgb(150, 150, 150, 0.25);
 }
+.custom-shadow-dropdown{
+  box-shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.08);
+}
 
 /* scrollbar */
 .scrollbar-y::-webkit-scrollbar {
