@@ -22,36 +22,40 @@
 <body>
     <div class="min-h-screen rs-wrapper">
         <div
-            class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen custom-shadow-base">
+            class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen custom-shadow-base md:translate-x-0 -translate-x-100 ease-in-out duration-300 z-[1000]">
+            <button id="sidebar-close-btn" type="button"
+                class="absolute -right-10 w-8 h-8 bg-[#003479] text-white rounded-full d-inline-flex items-center justify-center md:hidden cursor-pointer">
+                <i class="fas fa-xmark"></i>
+            </button>
             <div class="rs-logo mb-12">
-                <a href="" class="rs-logo-link max-w-[110pxs]">
+                <a href="" class="rs-logo-link max-w-[110px]">
                     <img src="images/logo.png" alt="" class="rs-logo-img">
                 </a>
             </div>
-            <div class="rs-menu grid items-start gap-y-5 group">
+            <div class="rs-menu grid items-start gap-y-5 px-3 lg:px-0">
                 <a href="index.html"
-                    class="rs-menu-item flex transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
+                    class="rs-menu-item flex h-10 lg:h-auto transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] lg:px-4 px-1 rounded-[100vh] bg-[#003479] text-white">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="invert brightness-1" src="icons/menu_grid_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Dashboard</span>
                 </a>
                 <a href="sales_history.html"
-                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    class="rs-menu-item flex h-10 lg:h-auto hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] lg:px-4 px-1 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_card_shopping_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Sales History</span>
                 </a>
                 <a href="outlet.html"
-                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    class="rs-menu-item flex h-10 lg:h-auto hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] lg:px-4 px-1 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_store_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Outlet</span>
                 </a>
                 <a href="agents.html"
-                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
+                    class="rs-menu-item flex h-10 lg:h-auto hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] lg:px-4 px-1 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_user_tie_primary.svg" alt="" />
                     </span>
@@ -59,14 +63,19 @@
                 </a>
             </div>
         </div>
-        <div class="rs-main lg:ms-[240px] ms-[88px]">
-            <div class="rs-appbar custom-shadow-base flex justify-end items-center p-5 gap-4">
-                <button type="button" class="text-black text-xl">
-                    <i class="fa-solid fa-bell"></i>
+        <div class="rs-main lg:ms-[240px] md:ms-[88px] ms-0">
+            <div class="rs-appbar custom-shadow-base flex justify-between items-center p-5 gap-4">
+                <button type="button" id="sidebar-open-btn" class="cursor-pointer text-base md:invisible">
+                    <i class="fas fa-bars"></i>
                 </button>
-                <div
-                    class="rs-profile overflow-hidden lg:w-[48px] lg:h-[48px] md:w-[40px] md:h-[40px] w-[36px] h-[36px] rounded-full">
-                    <img src="images/avatar.jpg" alt="" />
+                <div class="flex items-center gap-4">
+                    <button type="button" class="text-black text-xl">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <div
+                        class="rs-profile overflow-hidden lg:w-[48px] lg:h-[48px] md:w-[40px] md:h-[40px] w-[36px] h-[36px] rounded-full">
+                        <img src="images/avatar.jpg" alt="" />
+                    </div>
                 </div>
             </div>
             <div class="rs-content py-6">
@@ -119,7 +128,7 @@
         </div>
     </div>
 
-    <script src=""></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

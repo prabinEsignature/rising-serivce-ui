@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    const sidebarOpenBtn = document.getElementById('sidebar-open-btn');
+    const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
+
+    const rsSidebar =document.querySelector('.rs-sidebar');
+    sidebarOpenBtn.addEventListener('click', () => {
+        rsSidebar.classList.remove('-translate-x-100');
+    });
+
+    sidebarCloseBtn.addEventListener('click', () => {
+        rsSidebar.classList.add("-translate-x-100");
+    })
+
     // new Litepicker({ element: document.getElementById('datepicker') });
 
     document.querySelectorAll(".open-cs-modal").forEach(button => {
