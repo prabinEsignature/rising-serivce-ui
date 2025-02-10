@@ -4,6 +4,9 @@ body {
 .custom-shadow-base {
   box-shadow: 0 4px 24px 0 rgb(150, 150, 150, 0.25);
 }
+.custom-shadow-lg{
+  box-shadow: 0 4px 24px 0 rgb(150, 150, 150, 0.45);
+}
 .custom-shadow-tr {
   box-shadow: 0 4px 24px 0 rgb(150, 150, 150, 0.25);
 }
@@ -45,4 +48,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 4px;
     margin-right: 10px;
     font-weight: 600;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+  opacity: 0!important;
 }

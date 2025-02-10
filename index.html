@@ -21,35 +21,36 @@
 
 <body>
     <div class="min-h-screen rs-wrapper">
-        <div class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen shadow-xl">
+        <div
+            class="rs-sidebar lg:w-[240px] w-[88px] bg-white lg:p-5 p-3 fixed top-0 left-0 min-h-screen custom-shadow-base">
             <div class="rs-logo mb-12">
                 <a href="" class="rs-logo-link max-w-[110pxs]">
                     <img src="images/logo.png" alt="" class="rs-logo-img">
                 </a>
             </div>
             <div class="rs-menu grid items-start gap-y-5 group">
-                <a href="#"
-                    class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
+                <a href="index.html"
+                    class="rs-menu-item flex transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] bg-[#003479] text-white">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="invert brightness-1" src="icons/menu_grid_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Dashboard</span>
                 </a>
-                <a href="#"
+                <a href="sales_history.html"
                     class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_card_shopping_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Sales History</span>
                 </a>
-                <a href="#"
+                <a href="outlet.html"
                     class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_store_primary.svg" alt="" />
                     </span>
                     <span class="text-base font-normal hidden lg:inline-flex">Outlet</span>
                 </a>
-                <a href="#"
+                <a href="agents.html"
                     class="rs-menu-item flex hover:bg-[#0034791f] transition-all ease-in-out duration-300 justify-center no-underline lg:justify-start items-center gap-2 py-[10px] px-4 rounded-[100vh] text-[#003479]">
                     <span class="inline-flex items-center justify-center text-base">
                         <img class="" src="icons/menu_user_tie_primary.svg" alt="" />
@@ -70,13 +71,19 @@
             </div>
             <div class="rs-content py-6">
                 <div class="rs-topbar px-5 flex items-center gap-4 flex-col md:flex-wrap md:flex-row justify-between">
-                    <h3 class="rs-title text-2xl font-bold text-black w-full md:w-auto">Outlet</h3>
+                    <h3 class="rs-title text-2xl font-bold text-black w-full md:w-auto">Welcome</h3>
                     <div class="flex items-center justify-end flex-wrap w-full md:w-auto">
-                        <input type="date"
-                            class="rounded-lg border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out w-full md:max-w-[148px] placeholder:text-[#D9D9D9] text-[#757575] text-sm" />
+                        <div class="relative">
+                            <input type="date"
+                                class="rounded-lg h-[44px] border-[1px] border-[#D9D9D9] py-2 px-[10px] placeholder::text-[#D9D9D9] text-base border-0 outline-0 focus:border-[#003479] focus:border-1 transition-all duration-300 ease-in-out w-full md:max-w-[148px] md:w-[140px] placeholder:text-[#D9D9D9] text-[#757575] text-sm" />
+                            <span
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 text-base text-[#003479] pointer-events-none"><i
+                                    class="fas fa-calendar cursor-pointer"></i></span>
+                        </div>
                     </div>
                 </div>
-                <div class="rs-block-cards grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-12 gap-5 px-5">
+                <div
+                    class="rs-block-cards grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-12 gap-5 lg:px-8 md:px-6 px-5">
                     <div
                         class="rs-block-card-item flex justify-center items-center gap-[34px] custom-shadow-base rounded-lg p-5">
                         <div class="text-[#003479] text-[32px]">
@@ -90,7 +97,7 @@
                     <div
                         class="rs-block-card-item flex justify-center items-center gap-[34px] custom-shadow-base rounded-lg p-5">
                         <div class="text-[#F8C333] text-[32px]">
-                            <i class="fas fa-cart-shopping"></i>
+                            <i class="fa-solid fa-store"></i>
                         </div>
                         <div class="text-black gap-3 grid items-start">
                             <p class="text-base font-medium">Total Sales</p>
@@ -100,7 +107,7 @@
                     <div
                         class="rs-block-card-item flex justify-center items-center gap-[34px] custom-shadow-base rounded-lg p-5">
                         <div class="text-[#399305] text-[32px]">
-                            <i class="fas fa-cart-shopping"></i>
+                            <i class="fa-solid fa-user-tie"></i>
                         </div>
                         <div class="text-black gap-3 grid items-start">
                             <p class="text-base font-medium">Total Sales</p>

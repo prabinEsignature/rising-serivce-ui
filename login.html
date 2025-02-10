@@ -24,7 +24,7 @@
 
     <div class="bg-[#F2F7FF] login-page flex items-center justify-center min-h-screen">
         <div
-            class="grid grid-cols-1 lg:grid-cols-2 m-4 max-w-[500px] lg:max-w-[1076px] gap-12 p-[30px] bg-white rounded-2xl shadow-lg w-full">
+            class="grid grid-cols-1 lg:grid-cols-2 m-4 max-w-[500px] lg:max-w-[1076px] gap-12 p-[30px] bg-white rounded-2xl custom-shadow-base w-full">
             <div class="max-w-[488px] mx-auto flex items-center justify-center hidden lg:block">
                 <img src="images/login_hero.png" alt="" />
             </div>
@@ -38,18 +38,18 @@
                 </div>
                 <form action="" class="w-full">
                     <div class="grid items-start gap-y-5 py-12">
-                        <div class="flex border-[#F3F3F3] border-[1px] group focus-within:border-[#003479] transition-all ease-in-out duration-300 items-center justify-start gap-3 px-[10px] py-[15px] bg-[#F3F3F3] rounded-lg">
+                        <div class="flex border-[#F3F3F3] border-[1px] group focus-within:border-[#003479] transition-all ease-in-out duration-300 items-center justify-start gap-3 px-3 py-[15px] bg-[#F3F3F3] rounded-lg">
                             <span class="flex items-center justify-center text-[#9D9D9D] text-[20px]">
                                 <i class="fas fa-envelope"></i>
                             </span>
-                            <input type="text" class="text-[#9D9D9D] text-base outline-0" placeholder="Username">
+                            <input type="text" class="text-[#9D9D9D] text-base outline-0 focus:text-black" placeholder="Username">
                         </div>
                         <div
-                            class="flex border-[#F3F3F3] border-[1px] group focus-within:border-[#003479] transition-all ease-in-out items-center justify-start gap-3 px-[10px] py-[15px] bg-[#F3F3F3] rounded-lg relative cs-password-elem">
+                            class="flex border-[#F3F3F3] border-[1px] group focus-within:border-[#003479] transition-all ease-in-out items-center justify-start gap-3 px-3 py-[15px] bg-[#F3F3F3] rounded-lg relative cs-password-elem">
                             <span class="flex items-center justify-center text-[#9D9D9D] text-[20px]">
                                 <i class="fas fa-lock"></i>
                             </span>
-                            <input type="password" class="text-[#9D9D9D] text-base outline-0 password-input"
+                            <input type="password" class="text-[#9D9D9D] text-base outline-0 password-input focus:text-black"
                                 placeholder="Password">
                             <button type="button"
                                 class="absolute right-[10px] top-1/2 -translate-y-1/2 text-[#9D9D9D] text-xs toggle-password cursor-pointer hover:text-[#003479] transition-all ease-in-out duration-300">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <button type="submit"
-                        class="text-white text-base font-bold w-full h-[50px] bg-[#003479] rounded-lg">login</button>
+                        class="text-white text-base font-bold w-full h-[50px] bg-[#003479] rounded-lg cursor-pointer border-[#003479] border-[1px] hover:bg-transparent hover:text-[#003479] transition-all ease-in-out duration-300">Login</button>
                 </form>
             </div>
         </div>
