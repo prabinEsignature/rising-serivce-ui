@@ -86,53 +86,85 @@ document.addEventListener("DOMContentLoaded", () => {
     const csDropdownMenu = document.querySelector('.cs-dropdown-menu');
     const csDropdownOptions = csDropdownMenu?.querySelectorAll('.cs-dropdown-option');
 
-    if (csDropdownOptions?.length > 0) {
+    function resetDropdown() {
+        if (!csDropdownMenu || !csDropdownOptions?.length) return;
         const firstOption = csDropdownOptions[0];
+
+        csDropdownOptions.forEach(opt => {
+            opt.classList.remove('bg-[#ECF4FF]');
+            opt.querySelector('.dropdown-icon')?.classList.add("hidden");
+            opt.querySelector('.dropdown-text')?.classList.remove('text-black');
+        });
+
         firstOption.classList.add('bg-[#ECF4FF]');
-        firstOption.querySelector('.dropdown-icon').classList.remove("hidden");
-        firstOption.querySelector('.dropdown-text').classList.add('text-black');
-        csDropdownMenu.querySelector('.datepicker-value').textContent = firstOption.querySelector('.dropdown-text').textContent;
+        firstOption.querySelector('.dropdown-icon')?.classList.remove("hidden");
+        firstOption.querySelector('.dropdown-text')?.classList.add('text-black');
+
+        csDropdownMenu.querySelector('.datepicker-value').textContent =
+            firstOption.querySelector('.dropdown-text')?.textContent || '';
+
+        document.querySelectorAll('.cs-dropdown-select').forEach(select => select.classList.add('hidden'));
     }
 
-    document.addEventListener('click', function (e) {
-        const isLightpickOpen = document.querySelector('.lightpick:not(.is-hidden)') !== null;
+    resetDropdown();
 
-        if (isLightpickOpen && !e.target.closest('.cs-dropdown')) {
-            return;
-        }
-
+    document.addEventListener('mousedown', (e) => {
+        const isLightpickOpen = !!document.querySelector('.lightpick:not(.is-hidden)');
         const dropdownBox = e.target.closest('.cs-dropdown-menu');
+        if (isLightpickOpen && !e.target.closest('.cs-dropdown')) return;
+        document.querySelectorAll('.cs-dropdown-select').forEach(select => select.classList.add('hidden'));
 
         if (dropdownBox) {
             const dropdownSelect = dropdownBox.querySelector('.cs-dropdown-select');
-            dropdownSelect.classList.remove("hidden");
+            dropdownSelect?.classList.remove("hidden");
 
-            const options = dropdownSelect.querySelectorAll('.cs-dropdown-option');
-            const selectedText = dropdownBox.querySelector('.datepicker-value');
-
-            dropdownSelect.addEventListener('click', function (event) {
+            dropdownSelect?.addEventListener('click', (event) => {
                 const option = event.target.closest('.cs-dropdown-option');
-                if (option) {
-                    options.forEach(opt => {
-                        opt.classList.remove('bg-[#ECF4FF]');
-                        opt.querySelector('.dropdown-icon').classList.add("hidden");
-                        opt.querySelector('.dropdown-text').classList.remove('text-black');
-                    });
+                if (!option) return;
 
-                    option.classList.add('bg-[#ECF4FF]');
-                    option.querySelector('.dropdown-text').classList.add('text-black');
-                    option.querySelector('.dropdown-text').classList.remove('hidden');
-                    option.querySelector('.dropdown-icon').classList.remove("hidden");
+                dropdownSelect.querySelectorAll('.cs-dropdown-option').forEach(opt => {
+                    opt.classList.remove('bg-[#ECF4FF]');
+                    opt.querySelector('.dropdown-icon')?.classList.add("hidden");
+                    opt.querySelector('.dropdown-text')?.classList.remove('text-black');
+                });
 
-                    if (selectedText) {
-                        selectedText.textContent = option.querySelector('.dropdown-text').textContent;
-                    }
+                option.classList.add('bg-[#ECF4FF]');
+                option.querySelector('.dropdown-icon')?.classList.remove("hidden");
+                option.querySelector('.dropdown-text')?.classList.add('text-black');
 
-                    dropdownSelect.classList.add("hidden");
+                const selectedText = dropdownBox.querySelector('.datepicker-value');
+                if (selectedText) {
+                    selectedText.textContent = option.querySelector('.dropdown-text')?.textContent;
                 }
+
+                dropdownSelect.classList.add("hidden");
+            }, { once: true }); // Ensure only one click event is added
+        }
+    });
+
+    const picker = new Lightpick({
+        field: document.getElementById('datepicker'),
+        singleDate: true,
+        format: 'DD/MM/YYYY', // Set format to dd/mm/yyyy
+
+        // onSelect: function (start, end) {
+        //     var str = '';
+        //     str += start ? start.format('DD/MM/YYYY') + ' to ' : '';
+        //     str += end ? end.format('DD/MM/YYYY') : '...';
+        //     document.querySelector('.cs-dropdown-selected .datepicker-value').innerHTML = str;
+        // }
+        onSelect: function (date) {
+            const csDropdownSeparator = document.querySelector('.cs-dropdown-separator');
+            document.querySelector('.cs-dropdown-selected .datepicker-value').innerHTML = date.format('DD/MM/YYYY');
+            csDropdownOptions?.forEach(opt => {
+                opt.classList.remove('bg-[#ECF4FF]');
+                opt.querySelector('.dropdown-icon')?.classList.add("hidden");
+                opt.querySelector('.dropdown-text')?.classList.remove('text-black');
             });
-        } else {
-            document.querySelectorAll('.cs-dropdown-select').forEach(select => select.classList.add('hidden'));
+
+            if(csDropdownSeparator){
+                csDropdownSeparator.querySelector('.dropdown-icon')?.classList.remove("hidden");
+            }
         }
     });
 
@@ -140,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener('click', (e) => {
             const alertBox = e.target.closest('.cs-alert-dismissible');
             if (alertBox) {
-                alertBox.classList.add('hidden');  
+                alertBox.classList.add('hidden');
             }
         });
     });
